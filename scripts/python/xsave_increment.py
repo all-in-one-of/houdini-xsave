@@ -1,8 +1,8 @@
 import os
 import time
 import re
-from pwd import getpwuid
 import xsave_functions as xsf
+import hou
 
 # SET THIS TO TRUE IF YOU WOULD LIKE THE INCREMENT NUMBER TO COME BEFORE THE VERSION NUMBER (I.E 'my_file_i002_v003.hip')
 i_before_v = False

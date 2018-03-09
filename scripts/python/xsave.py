@@ -1,8 +1,5 @@
-import os
 import time
-from pwd import getpwuid
 import xsave_functions as xsf
-
 import hou
 
 # SAVE FILE, WITH CHECKS
