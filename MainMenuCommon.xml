@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mainMenu>
+  <menuBar>
+    <subMenu id="file_menu">
+      <label>File</label>
+      
+      <separatorItem>
+        <insertBefore>h.save</insertBefore>
+      </separatorItem>  
+      
+      <scriptItem>
+        <label>xSave</label>
+        <insertBefore>h.save</insertBefore>
+        <scriptPath>/Users/Sean/Library/Preferences/houdini/16.5/scripts/python/xsave.py</scriptPath>
+      </scriptItem>      
+      
+      <scriptItem>
+        <label>xSave, Increment Up</label>
+        <insertBefore>h.save</insertBefore>
+        <scriptPath>/Users/Sean/Library/Preferences/houdini/16.5/scripts/python/xsave_increment.py</scriptPath>
+      </scriptItem>
+      
+      <scriptItem>
+        <label>xSave, Version Up</label>
+        <insertBefore>h.save</insertBefore>
+        <scriptPath>/Users/Sean/Library/Preferences/houdini/16.5/scripts/python/xsave_version.py</scriptPath>
+      </scriptItem>     
+      
+      <separatorItem>
+        <insertBefore>h.save</insertBefore>
+      </separatorItem>        
+    </subMenu>
+  </menuBar>
+</mainMenu>
