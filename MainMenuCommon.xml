@@ -11,19 +11,19 @@
       <scriptItem>
         <label>xSave</label>
         <insertBefore>h.save</insertBefore>
-        <scriptPath>/Users/Sean/Library/Preferences/houdini/16.5/scripts/python/xsave.py</scriptPath>
+        <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/xsave.py</scriptPath>
       </scriptItem>      
       
       <scriptItem>
         <label>xSave, Increment Up</label>
         <insertBefore>h.save</insertBefore>
-        <scriptPath>/Users/Sean/Library/Preferences/houdini/16.5/scripts/python/xsave_increment.py</scriptPath>
+        <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/xsave_increment.py</scriptPath>
       </scriptItem>
       
       <scriptItem>
         <label>xSave, Version Up</label>
         <insertBefore>h.save</insertBefore>
-        <scriptPath>/Users/Sean/Library/Preferences/houdini/16.5/scripts/python/xsave_version.py</scriptPath>
+        <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/xsave_version.py</scriptPath>
       </scriptItem>     
       
       <separatorItem>

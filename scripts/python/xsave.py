@@ -11,7 +11,7 @@ def save():
     if do_save:
         do_save = xsf.checkOwner(hou.hipFile.path())
         
-    # IF ALLOWED< SAVE FILE
+    # IF ALLOWED, SAVE FILE
     if do_save:
         hou.hipFile.save()
         status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
