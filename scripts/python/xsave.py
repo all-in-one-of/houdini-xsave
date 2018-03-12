@@ -14,7 +14,7 @@ def save():
     # IF ALLOWED, SAVE FILE
     if do_save:
         hou.hipFile.save()
-        status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+        status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
         hou.ui.setStatusMessage(status_message)
 
 # RUN SAVE FUNCTION
