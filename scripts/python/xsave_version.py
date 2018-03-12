@@ -52,7 +52,7 @@ def saveVersionUp():
         existing_hip_name = os.path.basename(ver_name)
         
         # ASK USER HOW TO PROCEED    
-        save_method = hou.ui.displayMessage('A file with the name "%s" already exists in this directory.\nHow would you like to proceed?' % existing_hip_name, buttons=('Cancel','Overwrite','Save New Version'),default_choice=2)
+        save_method = hou.ui.displayMessage('A file with the name "{0}" already exists in this directory.\nHow would you like to proceed?'.format(existing_hip_name), buttons=('Cancel','Overwrite','Save New Version'),default_choice=2)
         
         # DO NOTHING
         if save_method == 0:
@@ -67,7 +67,7 @@ def saveVersionUp():
             # IF NOT, SAVE AND SET HOUDINI STATUS MESSAGE
             if do_save:
                 hou.hipFile.save(ver_name)
-                status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+                status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
                 hou.ui.setStatusMessage(status_message)
                 
         # SAVE NEW VERSION        
@@ -80,7 +80,7 @@ def saveVersionUp():
             if do_save:            
                 ver_name = xsf.uniqify_version(ver_name.rstrip(ext),is_file=[True,ext], splitter='_v')
                 hou.hipFile.save(ver_name)
-                status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+                status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
                 hou.ui.setStatusMessage(status_message)
                 
     # IF FILE DOESN'T EXIST                
@@ -92,7 +92,7 @@ def saveVersionUp():
         # IF NOT, SAVE AND SET HOUDINI STATUS MESSAGE    
         if do_save:         
             hou.hipFile.save(ver_name)
-            status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+            status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
             hou.ui.setStatusMessage(status_message)
 
 saveVersionUp()
