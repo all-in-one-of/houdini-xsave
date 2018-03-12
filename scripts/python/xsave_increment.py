@@ -109,7 +109,7 @@ def saveIncrement():
         existing_hip_name = os.path.basename(iter_name)
         
         # ASK USER HOW TO PROCEED
-        save_method = hou.ui.displayMessage('A file with the name "%s" already exists in this directory.\nHow would you like to proceed?' % existing_hip_name, buttons=('Cancel','Overwrite','Save New Version'),default_choice=2)
+        save_method = hou.ui.displayMessage('A file with the name "{0}" already exists in this directory.\nHow would you like to proceed?'.format(existing_hip_name), buttons=('Cancel','Overwrite','Save New Version'),default_choice=2)
         
         # DO NOTHING
         if save_method == 0:
@@ -124,7 +124,7 @@ def saveIncrement():
             # IF NOT, SAVE AND SET HOUDINI STATUS MESSAGE
             if do_save:
                 hou.hipFile.save(iter_name)
-                status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+                status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
                 hou.ui.setStatusMessage(status_message)
                 
         # SAVE NEW INCREMENT
@@ -137,7 +137,7 @@ def saveIncrement():
             if do_save:        
                 iter_name = xsf.uniqify_increment(iter_name.rstrip(ext),is_file=[True,ext], splitter='_i', secondary_splitter='_v')
                 hou.hipFile.save(iter_name)
-                status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+                status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
                 hou.ui.setStatusMessage(status_message)
                 
     # IF FILE DOESN'T EXIST
@@ -149,7 +149,7 @@ def saveIncrement():
         # IF NOT, SAVE AND SET HOUDINI STATUS MESSAGE
         if do_save:   
             hou.hipFile.save(iter_name)
-            status_message = "Successfully saved %s (%s)" % (hou.hipFile.basename(), time.strftime("%c"))
+            status_message = "Successfully saved {0} ({1})".format(hou.hipFile.basename(), time.strftime("%c"))
             hou.ui.setStatusMessage(status_message)
 
 
