@@ -9,7 +9,7 @@ def checkOwner(check_file):
 	owner = getpwuid(os.stat(check_file).st_uid).pw_name
 	if owner != shell_user:
 	    do_save = False
-	    hou.ui.displayMessage('File was last saved by user "%s".\nPlease \'save as\' with a new name.' % owner, buttons=('OK',))
+	    hou.ui.displayMessage('File was last saved by user "{0}".\nPlease \'save as\' with a new name.'.format(owner), buttons=('OK',))
     return do_save
 
 # CHECK IF FILE IS "untitled.hip" AND IF SO, PREVENT SAVING
