@@ -9,6 +9,11 @@ i_before_v = False
 
 # CALCULATE VERSION NAME
 def renameVersion(ext):
+    """
+    Reads the current filename and calculates the next version. If no increment exists in the current version,
+    it sets the version to 002.
+    """    
+    
     file_name = hou.hipFile.name()
     
     # IF VERSION EXISTS IN FILENAME
@@ -43,6 +48,11 @@ def renameVersion(ext):
  
 # SAVE, VERSIONING UP
 def saveVersionUp():
+    """
+    Check if next version already exists. If it doesn't, save. If it does, ask the user how to proceed 
+    (cancel, overwrite the existing file, or calculate a new non-existing version)
+    """
+    
     file_name = hou.hipFile.name()    
     ext = os.path.splitext(hou.hipFile.basename())[1]
     ver_name = renameVersion(ext)
