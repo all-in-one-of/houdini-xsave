@@ -2,8 +2,11 @@ import time
 import xsave_functions as xsf
 import hou
 
-# SAVE FILE, WITH CHECKS
 def save():
+    """
+    Checks whether the current file is named 'untitled.hip' or was last saved by a different user, and if not, saves the file.
+    """
+    
     # CHECK UNTITLED
     do_save = xsf.checkUntitled(hou.hipFile.basename())
     
