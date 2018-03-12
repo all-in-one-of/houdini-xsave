@@ -9,6 +9,11 @@ i_before_v = False
 
 # CALCULATE INCREMENT NAME
 def renameIncrement(ext):
+    """
+    Reads the current filename and calculates the next increment. If no increment exists in the current filename,
+    it sets the increment to 002.
+    """
+    
     
     # REGEX TO FIND CURRENT INCREMENTS AND VERSIONS
     regex_i = re.compile(".*_i[0-9].*", re.IGNORECASE)
@@ -98,8 +103,12 @@ def renameIncrement(ext):
             
     return iter_name
 
-# SAVE, INCREMENTING UP
 def saveIncrement():
+    """
+    Check if next increment already exists. If it doesn't, save. If it does, ask the user how to proceed 
+    (cancel, overwrite the existing file, or calculate a new non-existing increment)
+    """
+    
     # FIND EXTENSION OF CURRENT FILE AND CALCULATE NEW INCREMENT NAME
     ext = os.path.splitext(hou.hipFile.basename())[1]
     iter_name = renameIncrement(ext)
