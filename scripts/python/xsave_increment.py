@@ -12,6 +12,12 @@ def renameIncrement(ext):
     """
     Reads the current filename and calculates the next increment. If no increment exists in the current filename,
     it sets the increment to 002.
+    
+    Arguments:
+    ext (string): extension of file
+    
+    Returns:
+    string
     """
     
     
