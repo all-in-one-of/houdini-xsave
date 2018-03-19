@@ -14,10 +14,10 @@ def renameIncrement(ext):
     it sets the increment to 002.
     
     Arguments:
-    ext (string): extension of file
+        ext (string): extension of file
     
     Returns:
-    string
+        string
     """
     
     
