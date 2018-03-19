@@ -13,10 +13,10 @@ def renameVersion(ext):
     Reads the current filename and calculates the next version. If no increment exists in the current version, it sets the version to 002.
     
     Arguments:
-    ext (string): extension of file
+        ext (string): extension of file
     
     Returns:
-    string
+        string
     """    
     
     file_name = hou.hipFile.name()
