@@ -6,10 +6,10 @@ def checkOwner(check_file):
 	Check if the previous owner of the file is different than the current user, and if so, prevent saving. 
 	
 	Arguments:
-	check_file(string): Path of hip file to check.
+		check_file(string): Path of hip file to check.
 	
 	Returns:
-	int: whether or not the file passed the check
+		int: whether or not the file passed the check
 	"""
 	
 	shell_user = os.getenv("USER")
@@ -26,10 +26,10 @@ def checkUntitled(check_file):
 	Check if the file is named "untitled.hip", and if so, prevent saving. 
 	
 	Arguments:
-	check_file(string): Path of hip file to check.
+		check_file(string): Path of hip file to check.
 	
 	Returns:
-	int: whether or not the file passed the check
+		int: whether or not the file passed the check
 	"""
 	
 	do_save = True
@@ -44,15 +44,15 @@ def uniqify_increment(name_to_change, list_to_compare=[], is_file=[False,None], 
 	Find next highest unique filename for incrementing up, skipping over any existing increments.
 	
 	Arguments:
-	name_to_change (string): The name of the file to make a unique name for.
-	list_to_compare (list): New filename must not match any strings in this list.
-	is_file (list): [bool, ext]: The first item of this list specifies whether the input is a file. 
-				     The second is the file's extenstion.
-	splitter (string): The increment string to split by (usually "_i")
-	secondary_splitter (string): The version string to split by (usually "_v")
-	
+		name_to_change (string): The name of the file to make a unique name for.
+		list_to_compare (list): New filename must not match any strings in this list.
+		is_file (list): [bool, ext]: The first item of this list specifies whether the input is a file. 
+					     The second is the file's extenstion.
+		splitter (string): The increment string to split by (usually "_i")
+		secondary_splitter (string): The version string to split by (usually "_v")
+
 	Returns:
-	string
+		string
 	"""
 	
 	x = 0
@@ -83,14 +83,14 @@ def uniqify_version(name_to_change, list_to_compare=[], is_file=[False,None], sp
 	Find next highest unique filename for versioning up, skipping over any existing versions.
 	
 	Arguments:
-	name_to_change (string): The name of the file to make a unique name for.
-	list_to_compare (list): New filename must not match any strings in this list.
-	is_file (list): [bool, ext]: The first item of this list specifies whether the input is a file. 
-				     The second is the file's extenstion.
-	splitter (string): The version string to split by (usually "_v")
-	
+		name_to_change (string): The name of the file to make a unique name for.
+		list_to_compare (list): New filename must not match any strings in this list.
+		is_file (list): [bool, ext]: The first item of this list specifies whether the input is a file. 
+					     The second is the file's extenstion.
+		splitter (string): The version string to split by (usually "_v")
+
 	Returns:
-	string
+		string
 	"""
 	
 	x = 0
