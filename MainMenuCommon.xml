@@ -8,19 +8,19 @@
         <insertBefore>h.save</insertBefore>
       </separatorItem>  
       
-      <scriptItem>
+      <scriptItem id="h.xsave">
         <label>xSave</label>
         <insertBefore>h.save</insertBefore>
         <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/xsave.py</scriptPath>
       </scriptItem>      
       
-      <scriptItem>
+      <scriptItem id="h.xsave_iterate">
         <label>xSave, Increment Up</label>
         <insertBefore>h.save</insertBefore>
         <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/xsave_increment.py</scriptPath>
       </scriptItem>
       
-      <scriptItem>
+      <scriptItem id="h.xsave_version">
         <label>xSave, Version Up</label>
         <insertBefore>h.save</insertBefore>
         <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/xsave_version.py</scriptPath>
